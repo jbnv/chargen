@@ -49,7 +49,7 @@ JapaneseNameModel.prototype.makeMiddleName = function(name) {
 // name: Name() object.
 JapaneseNameModel.prototype.makeSurname = function(name) {
 	rand = parseFloat(name.random) || Math.random();
-	name.surname = DMU.pickElements(rand,this.surnamePrefixes,this.surnameSuffixes);	
+	name.surname = DMU.pickElements(rand,0,1,this.surnamePrefixes,this.surnameSuffixes);	
 }
 
 module.exports = JapaneseNameModel;

@@ -3,27 +3,30 @@ var DMU = new (require("../lib/DataMockUtil"));
 function GermanNameModel() {
 	
 	this.maleNames = [
-		'Andreas','Bernd','Dieter','Dominik','Erik','Ernst','Franz','Hans',
-		'Jan','Jens','Jonas','Jorg','Jurgen','Klaus','Lorenz','Ludwig','Lukas',
-		'Markus','Niklas','Thorsten','Ulrich','Uwe','Wolfgang'
+		'Andreas','Bernd','Dieter','Dominik','Emmerich','Erik','Ernst','Franz','Hans',
+		'Jan','Jens','Johans','Jonas','Jorg','Jurgen','Klaus','Lorenz','Ludwig','Lukas',
+		'Markus','Niklas','Richart','Thorsten','Ulrich','Uwe','Wolfgang'
 	];
 	
 	this.femaleNames = [
 		'Angelika','Anke','Antje','Birgit','Erika','Franziska','Heike','Ines',
 		'Karin','Karolin','Katja','Kerstin','Marie','Melanie','Monika','Nadine','Nicole',
-		'Sabine','Silke','Simone','Stefanie','Susanne','Tanja','Ulrike','Ursula','Veronika'
+		'Sabine','Silke','Simone','Stefanie','Susanne','Tanja','Ulrike','Ursula','Valerie','Veronika'
 	];
 	
 	this.surnamePrefixes = [
 		'Braun','Deutsch','Eisen','Engel','Fisch','Fleisch',
-		'Gold','Gott','Gross','Grun','Hammer','Hahn',
+		'Gold','Gott','Gross','Grun','Hammer','Hahn','Hohen',
 		'Klein','Lang','Leben','Midden','Morgen','Nacht',
 		'Roth','Sauer','Schwarz','Schwein','Silber',
-		'Tannen','Vogel','Wolf','Weiss','Zimmer'
+		'Tannen','Vogel','Wolf','Weiss','Zimmer',
+		'Ein','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf',
+		'Erste','Zweite','Dritte','Vierte','Fünfte','Sechste','Siebte','Achte','Neunte','Zehnte','Elfte','Zwölfte'
 	];
 	
 	this.surnameSuffixes = [
-		'','bauer','baum','beck','berg','berger','dorff','feld','haus','hardt','holz','hower','huber','jager',
+		'','bauer','baum','beck','berg','berger','dorff','feld',
+		'haus','hardt','heim','holz','hower','huber','jager',
 		'kaiser','kramer','kruger','konig','lager','mann','merkel','peter','richter',
 		'schmidt','schafer','schreiber','schneider','steiger','stein','tag','thaler',
 		'wald','walder','walter','weber','weiser','winkel','wurst','ziegler'
@@ -54,7 +57,7 @@ GermanNameModel.prototype.makeMiddleName = function(name) {
 // name: Name() object.
 GermanNameModel.prototype.makeSurname = function(name) {
 	rand = parseFloat(name.random) || Math.random();
-	name.surname = DMU.pickElements(rand,this.surnamePrefixes,this.surnameSuffixes);	
+	name.surname = DMU.pickElements(rand,0,1,this.surnamePrefixes,this.surnameSuffixes);	
 }
 
 module.exports = GermanNameModel;
