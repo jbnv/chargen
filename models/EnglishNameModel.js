@@ -149,7 +149,7 @@ EnglishNameModel.prototype.makeMiddleName = function(name) {
 }
 
 // name: Name() object.
-EnglishNameModel.prototype.makeSurname = function(rand) {
+EnglishNameModel.prototype.makeSurname = function(name) {
 	rand = parseFloat(name.random) || Math.random();
 	if (rand < 0.10) {
 		rand = rand / 0.10;
