@@ -5,13 +5,13 @@ function SpanishNameModel() {
 	this.namePrefixes = [
 		'Alejandr','Alessandr','Alons','Alvar','Albert','Angel','Armand','Antigu','Azul',
 		'Batist','Benit','Blanqu',
-		'Calv','Can','Carl','Castill','Castr','Catal','Conchit','Crist','Cristin',
+		'Calv','Can','Carden','Carl','Castill','Castr','Catal','Conchit','Crist','Cristin',
 		'Delgad','Di','Diegu','Domingu','Donn','Dor','Federiqu','Fernand',
 		'Gerald','Gerard','Garci','Garrid','Gat','Gill','Glori','Gom','Gonzal','Gutierr',
 		'Hernand','Horati','Iglesi','Ignaci',
 		'Jimen','Juli','Luci','Lun','Lop',
 		'Marqu','Mari','Marin','Martin','Medin','Molin','Moral','Moren','Mate','Muñ',
-		'Nan','Navarr','Nin','Noriegu','Nuñ','Orteg','Pabl','Patrici','Peñ','Perr','Priet','Pedr',
+		'Nan','Naranj','Navarr','Nin','Noriegu','Nuñ','Orteg','Pabl','Patrici','Peñ','Perr','Priet','Pedr',
 		'Ramir','Rodrigu','Roj','Romer','Rubi','Robert',
 		'Sanch','Sandr','Santiagu','Serran','Suar','Tañ','Toled','Torr','Vasqu','Velasqu'
 	];
@@ -33,7 +33,9 @@ function SpanishNameModel() {
 		this.femaleNames.push(this.namePrefixes[i]+'a');
 		this.surnames.push(this.namePrefixes[i]+'o');
 		this.surnames.push(this.namePrefixes[i]+'on');
+		this.surnames.push(this.namePrefixes[i]+'os');
 		this.surnames.push(this.namePrefixes[i]+'a');
+		this.surnames.push(this.namePrefixes[i]+'as');
 		this.surnames.push(this.namePrefixes[i]+'ano');
 		this.surnames.push(this.namePrefixes[i]+'ez');
 	}
