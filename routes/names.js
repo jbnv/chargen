@@ -1,12 +1,6 @@
 /* jshint node:true */
 
-// Load models.
-modelNames = ['Name','EnglishNameModel','SpanishNameModel','JapaneseNameModel','GermanNameModel'];
-models = {};
-for (i in modelNames) {
-	name = modelNames[i];
-	models[name] = require("../models/"+name);
-}
+nameTemplate = require("../models/Name");
 
 module.exports = function(app) {
 
@@ -20,14 +14,7 @@ module.exports = function(app) {
 		// Generation.
 		var outbound = [];
 		for (ordinal = 0; ordinal < quantity; ordinal++) {
-			
-			name = new models.Name();
-			name.ordinal = ordinal; // a number that indicates the rank or position of the name in a listStyleType
-			name.random = (ordinal + Math.random())/quantity; // a number [0,1) to randomize the name
-			//TODO Allow specification of the gender or gender mix.
-			
-			model = new models[language+'NameModel']();
-			name.apply(model);
+			name = new nameTemplate(language,quantity,ordinal);
 			outbound.push(name);
 		}
 		
