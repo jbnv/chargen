@@ -1,4 +1,5 @@
 var DMU = new (require("../lib/DataMockUtil"));
+var EnglishWords = new (require("./EnglishWords"));
 
 function EnglishNameModel() {
 
@@ -41,7 +42,7 @@ function EnglishNameModel() {
 	
 	// Prefixes that end in a vowel (and thus pair only with those beginning with consonants).
 	this.namePrefixes2 = [
-		'Au','Lo','Madi','Ro','Sco','Tru'
+		'Au','Es','Lo','Madi','Nor','Ro','Sco','Sus','Tru','Wes'
 	];
 	
 	this.nameSuffixes1 = [
@@ -75,37 +76,32 @@ function EnglishNameModel() {
 	
 
 	this.surnames = [
-		'Brady','Bush','Coolidge','Cook',
-		'Cooper','Davis','Ford','Grant',
-		'Harding','Jones','King','Lincoln','Nixon','Prichard',
-		'Reagan','Shreve','Smith','Taft','Truman','Wallace','Weaver','Willis'
+		'Brady','Coolidge','Cook','Cooper','Davis','Ford','Grant',
+		'Jones','King','Lincoln','Nixon','Prichard',
+		'Reagan','Shreve','Smith','Taft','Weaver','Willis'
 	];
 	
 	this.surnameNamePrefixes = [
 		"O'","Mc","Fitz","Bar"
 	];
-	this.surnamePrefixes = [
-		'An','Angel','Apple','Ash','Autumn','Bal','Balti','Bar',
-		'Beach','Beaver','Big','Bird','Black','Blay','Blind','Blue','Bix',
-		'Bomb','Bor','Brine','Briton','Brook','Brow','Brown','Bull','Bur',
-		'Butt','Butter','Cald','Cart','Castle','Clay','Clin','Coal','Copper','Cold',
-		'Corn','Crom','Crow','Darn','Deer','Doe','Dor','Duck','Duke','Dutch',
-		'Eagle','East','Edin','Elm','Engle','Es','Fair','Farn','Fawn','Fern',
-		'Fill','Finch','Fir','Fish','Fox','French','Fur','Gan','Glass','Glen',
-		'Glou','Glu','God','Gold','Golden','Good','Goose','Gor','Gos',
-		'Grand','Grant','Green','Gross','Hair','Hard','Hart','Hawk','Hot','Iron',
-		'King','Lady','Lamb','Lan','Leo','Lin','Linden','Lion','Little',
-		'Liver','Living','Long','Lord','Love','Man','Middle',
-		'Moon','Mum','Mur','Nickel','Nor','North','Oak','Oil','Old','Owl',
-		'Orange','Paper','Peter','Pine','Price','Prince','Queen',
-		'Rain','Ram','Raven','Red','River','Roe','Rud','Rums','Rut',
-		'Sand','Saxon','School','Shakes','Shef','Sher','Ship',
-		'Short','Shutter','Shuttle','Silver','Sim','Snow','South','Spring','Stag','Steven',
-		'Summer','Sun','Sus','Tar','Teal','Thom','Wads','Wal',
-		'War','Washing','Wax','Weather','Wes','West','White','Wil',
-		'Wind','Winter','Wolf','Wor','Wren','Yellow','Young',
-		'One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Twelve'
+	
+	surnamePrefixes = [
+		'An','Angel','Bal','Balti','Bar','Beach','Blay','Bix',
+		'Bomb','Bor','Brine','Brook','Brow','Bur','Butt','Butter','Cald','Cart','Castle','Clin',
+		'Corn','Crom','Darn','Dor','Duke','Edin','Farn',
+		'Fill','Fur','Gan','Glen','Glou','Glu','God','Gor','Gos','Grant','Hair',
+		'King','Lady','Lan','Leo','Lin','Liver','Lord','Love','Man',
+		'Moon','Mum','Mur','Paper','Peter','Price','Prince','Queen',
+		'Rain','River','Rud','Rums','Rut','School','Shakes','Shef','Sher','Ship',
+		'Shutter','Shuttle','Sim','Steven',
+		'Sun','Thom','Wads','Wal','War','Washing','Weather','Wil',
+		'Wind','Wor'
 	];
+	this.surnamePrefixes = surnamePrefixes.concat(
+		EnglishWords.cardinalNumbers,EnglishWords.ordinalNumbers,
+		EnglishWords.adjectives,EnglishWords.animals,EnglishWords.colors,EnglishWords.directions,
+		EnglishWords.ethnicities,EnglishWords.plants,EnglishWords.substances,EnglishWords.timeWords
+	);
 	
 	// We probably don't want to pregenerate all of the possible names, 
 	// since the number of combinations is in the thousands.
