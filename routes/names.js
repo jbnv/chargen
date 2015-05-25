@@ -1,7 +1,7 @@
 /* jshint node:true */
 
 // Load models.
-modelNames = ['Name','EnglishNameModel']; //LATER 'SpanishName','GermanName','JapaneseName'
+modelNames = ['Name','EnglishNameModel','SpanishNameModel']; //LATER ,'GermanNameModel','JapaneseNameModel'
 models = {};
 for (i in modelNames) {
 	name = modelNames[i];
