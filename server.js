@@ -6,11 +6,11 @@ var http = require('http'),
 var app = Express();
 
 // Routes. 
-var routes = ['names'];
+var routes = ['addresses','names'];
 for (i in routes) {
 	console.log("Loading route: " + routes[i]);
 	module = require("./routes/" + routes[i]);
-	new module(app)
+	new module(app);
 }
 
 // Anything else.
