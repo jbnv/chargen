@@ -4,7 +4,7 @@ function GermanNameModel() {
 	
 	this.maleNames = [
 		'Andreas','Bernd','Dieter','Dominik','Emmerich','Erik','Ernst','Franz','Hans',
-		'Jan','Jens','Johans','Jonas','Jorg','Jurgen','Klaus','Lorenz','Ludwig','Lukas',
+		'Jan','Jens','Johans','Jonas','Jorg','Jurgen','Klaus','Kraus','Lorenz','Ludwig','Lukas',
 		'Markus','Niklas','Richart','Thorsten','Ulrich','Uwe','Wolfgang'
 	];
 	
@@ -19,7 +19,7 @@ function GermanNameModel() {
 		'Gold','Gott','Gross','Grun','Hammer','Hahn','Hohen',
 		'Klein','Lang','Leben','Midden','Morgen','Nacht',
 		'Roth','Sauer','Schwarz','Schwein','Silber',
-		'Tannen','Vogel','Wolf','Weiss','Zimmer',
+		'Tannen','Thor','Vogel','Wasser','Wolf','Weiss','Zimmer',
 		'Ein','Zwei','Drei','Vier','Fünf','Sechs','Sieben','Acht','Neun','Zehn','Elf','Zwölf',
 		'Erste','Zweite','Dritte','Vierte','Fünfte','Sechste','Siebte','Achte','Neunte','Zehnte','Elfte','Zwölfte'
 	];
@@ -29,7 +29,7 @@ function GermanNameModel() {
 		'haus','hardt','heim','holz','hower','huber','jager',
 		'kaiser','kramer','kruger','konig','lager','mann','merkel','peter','richter',
 		'schmidt','schafer','schreiber','schneider','steiger','stein','tag','thaler',
-		'wald','walder','walter','weber','weiser','winkel','wurst','ziegler'
+		'wald','walder','walter','wasser','weber','weiser','winkel','wurst','ziegler'
 	];
 
 }
